@@ -1,6 +1,16 @@
 #!/bin/bash
 set -e
 
+if [ ! -f ~/.bashrc.OG ]; then
+  echo "backing up ~/.bashrc to ~/.bashrc.OG..."
+  cp ~/.bashrc ~/.bashrc.OG
+fi
+
+if [ ! -f ~/.zshrc.OG ]; then
+  echo "backing up ~/.zshrc to ~/.zshrc.OG..."
+  cp ~/.zshrc ~/.zshrc.OG
+fi
+
 echo "installing oh my zsh..."
 if [ -d ~/.oh-my-zsh ]; then
   echo "it looks like oh my zsh is already installed. doing nothing."
