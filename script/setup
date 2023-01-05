@@ -1,12 +1,12 @@
 #!/bin/bash
 set -e
 
-if [ ! -f ~/.bashrc.OG ]; then
+if [ ! -f ~/.bashrc.OG ] && [ -f ~/.bashrc ]; then
   echo "backing up ~/.bashrc to ~/.bashrc.OG..."
   cp ~/.bashrc ~/.bashrc.OG
 fi
 
-if [ ! -f ~/.zshrc.OG ]; then
+if [ ! -f ~/.zshrc.OG ] && [ -f ~/.zshrc ]; then
   echo "backing up ~/.zshrc to ~/.zshrc.OG..."
   cp ~/.zshrc ~/.zshrc.OG
 fi
