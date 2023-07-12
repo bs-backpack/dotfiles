@@ -101,6 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# homebrew
+eval $(/opt/homebrew/bin/brew shellenv)
+
 eval "$(direnv hook zsh)"
 eval "$(rbenv init -)"
 
